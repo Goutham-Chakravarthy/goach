@@ -1,0 +1,11 @@
+.line {
+  display: block;
+  filter: url(#blur-matrix) blur(0.4px);
+  -webkit-filter: url(#blur-matrix) blur(0.4px);
+  will-change: filter;
+}
+
+.line-inner {
+  display: inline-block;
+  will-change: filter;
+}

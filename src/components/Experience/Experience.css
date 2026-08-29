@@ -1,0 +1,93 @@
+.experience-section {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  background: #e0ddcf;
+  overflow: hidden;
+  font-family: "PP Neue Montreal", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.experience-section .slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.experience-section .slider canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.experience-section .slide-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: difference;
+  user-select: none;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.experience-section h1 {
+  font-size: clamp(2rem, 4vw, 6rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.experience-section p {
+  font-weight: 500;
+  margin: 0;
+}
+
+.experience-section .slide-title {
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translate(0%, -50%);
+  width: max-content;
+  color: #fff;
+}
+
+.experience-section .slide-description {
+  position: absolute;
+  top: 50%;
+  right: 3rem;
+  transform: translate(0%, -50%);
+  width: 15%;
+  min-width: 250px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 2;
+}
+
+.experience-section .char,
+.experience-section .line {
+  display: inline-block;
+  will-change: transform;
+  position: relative;
+}
+
+@media (max-width: 1000px) {
+  .experience-section .slide-title {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .experience-section .slide-description {
+    width: 75%;
+    text-align: center;
+    top: unset;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
